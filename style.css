@@ -3,10 +3,16 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: #0A100D;
-
+  background-image: url("https://images.unsplash.com/photo-1520509414578-d9cbf09933a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80");
+  background-size: cover;
 }
 
-h1, h2 {
+h1 {
+  font-weight: 700;
+  color: #A22C29;
+}
+
+h2 {
   color: #A22C29;
   font-weight: 400;
 }
@@ -18,7 +24,7 @@ a {
 
 a:hover {
   color: #A22C29;
-  transition: 0.5s linear;
+  transition: 0.2s linear;
 }
 
 li {
@@ -30,11 +36,11 @@ li {
 
 .list-inline > li {
   display: inline;
-  transition: 0.5s linear;
 }
 
 .list-inline > li:hover {
   transform:scale(1.02);
+  transition: 0.2s linear;
 }
 
 
@@ -43,48 +49,55 @@ p {
 }
 
 .container {
-  margin: 40px 80px auto;
   margin: 0 auto;
+  margin-top: 40px;
   width: 700px;
 }
 
 .card-grey {
+  opacity: 0.9;
   background-color: #EDEEEE;
   padding: 40px;
+  margin:0 auto;
+  max-width: 500px;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
   border-radius: 4px;
   text-align: center;
   border-radius: 20px;
-  transition: 0.2s linear;
   margin-bottom: 20px;
 }
 
 .card-grey:hover {
+  opacity: 0.95;
   background-color: #F6F6F6;
   transform:scale(1.02);
+  padding: 60px;
   box-shadow: 0px 10px 30px rgba(0,0,1,0.5);
+  transition: 0.2s ease-in;
 }
 
 img {
   border-radius: 50%;
   width:150px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
 }
 
 ul {
   padding: 0;
 }
 
-.red-btn {
+a.red-btn {
   background-color: #AA3F3C;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: 700;
-  transition: 0.5s linear;
 }
 
-.red-btn:hover {
+a.red-btn:hover {
   color: white;
+  transform:scale(1.05);
+  transition: 0.2s linear;
   background-color: #A22C29;
 }
 
@@ -104,5 +117,37 @@ ul {
   /* For a screen < 540px, this CSS will be read */
   .container {
     width: 300px;
+  }
+}
+
+
+.card-grey {
+  transform: translateX(0);
+  animation: shake 2s ease-in-out 0s;
+}
+
+@keyframes shake {
+  2%, 22% {
+    transform: translateX(-1px);
+    transform: rotate(-1deg);
+  }
+
+  5%, 20% {
+    transform: translateX(2px);
+    transform: rotate(1deg);
+  }
+
+  7%, 12%, 18% {
+    transform: translateX(-4px);
+    transform: rotate(-2deg);
+  }
+
+  10%, 15% {
+    transform: translateX(4px);
+    transform: rotate(2deg);
+  }
+  25% {
+    transform: translateX(0);
+    transform: rotate(0deg);
   }
 }
